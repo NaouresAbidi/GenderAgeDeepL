@@ -1,0 +1,14 @@
+numpy
+pandas
+tensorflow==2.12.0
+seaborn
+matplotlib
+scikit-learn
+opencv-python
+mlflow
+dvc
+fastapi
+uvicorn
+pytest
+tqdm
+pillow
