@@ -4,24 +4,23 @@ A deep learning project using a **Convolutional Neural Network (CNN)** to predic
 
 ## Overview
 
-| Detail | Description | 
- | ----- | ----- | 
-| **Framework** | TensorFlow / Keras | 
-| **Tasks** | Age Prediction (Regression), Gender Prediction (Binary Classification) | 
-| **Dataset** | UTKFace ($\sim 20,000$ labeled face images) | 
-| **Deployment** | Flask REST API (`/predict` endpoint) | 
+| Detail | Description |
+ | ----- | ----- |
+| **Framework** | TensorFlow / Keras |
+| **Tasks** | Age Prediction (Regression), Gender Prediction (Binary Classification) |
+| **Dataset** | UTKFace ($\sim 20,000$ labeled face images) |
+| **Deployment** | Flask REST API (`/predict` endpoint) |
 
 ## Model Architecture
 
 The model uses a custom CNN with **shared convolutional layers** and **two separate output heads** for age and gender.
 
-| Component | Details | 
- | ----- | ----- | 
-| **Shared Layers** | $4$ Convolutional Blocks (filters: $32 \rightarrow 256$) $\rightarrow$ Dense ($512$ units) | 
-| **Age Output** | Linear Activation, **MAE** Loss | 
-| **Gender Output** | Sigmoid Activation, **Binary Crossentropy** Loss | 
-| **Optimizer** | Adam ($\text{lr} = 1\text{e-}4$) | 
-
+| Component | Details |
+ | ----- | ----- |
+| **Shared Layers** | $4$ Convolutional Blocks (filters: $32 \rightarrow 256$) $\rightarrow$ Dense ($512$ units) |
+| **Age Output** | Linear Activation, **MAE** Loss |
+| **Gender Output** | Sigmoid Activation, **Binary Crossentropy** Loss |
+| **Optimizer** | Adam ($\text{lr} = 1\text{e-}4$) |
 ### Preprocessing
 
 All images are consistently processed across training and inference:
@@ -34,9 +33,9 @@ All images are consistently processed across training and inference:
 
 ## Results Summary
 
-| Metric | Value | 
- | ----- | ----- | 
-| **Age MAE** | $\sim 4.2$ years | 
+| Metric | Value |
+ | ----- | ----- |
+| **Age MAE** | $\sim 4.2$ years |
 | **Gender Accuracy** | $\sim 91\%$ | 
 | **Model Size** | $\sim 45$ MB | 
 
